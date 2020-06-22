@@ -1,14 +1,16 @@
 package com.baeldung.ls.persistence.repository.impl;
 
-import com.baeldung.ls.persistence.model.Project;
-import com.baeldung.ls.persistence.repository.IProjectRepository;
-import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+
+import com.baeldung.ls.persistence.model.Project;
+import com.baeldung.ls.persistence.repository.IProjectRepository;
+
+// @Repository
 public class ProjectRepositoryImpl implements IProjectRepository {
 
     private List<Project> projects = new ArrayList<>();
@@ -32,5 +34,12 @@ public class ProjectRepositoryImpl implements IProjectRepository {
         }
         return project;
     }
+    
+    @Bean
+    @Scope("prototype")
+    public IProjectRepository prototypeBean() {
+        
+        return new ProjectRepositoryImpl();
+    } 
 
 }

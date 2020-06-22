@@ -8,12 +8,22 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+import javax.annotation.PostConstruct;
+
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
     @Autowired
     private IProjectRepository projectRepository;
+    
+    @Autowired
+    private IProjectRepository projectRepository2;
 
+    @PostConstruct
+    public void after() {
+        
+    }
+    
     @Override
     public Optional<Project> findById(Long id) {
         return projectRepository.findById(id);
