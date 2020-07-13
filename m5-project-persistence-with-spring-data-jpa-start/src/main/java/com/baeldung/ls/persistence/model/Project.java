@@ -4,8 +4,15 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Random;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Project {
 
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String name;
@@ -19,6 +26,10 @@ public class Project {
         this.id = id;
         this.name = name;
         this.dateCreated = dateCreated;
+    }
+    
+    public Project() {
+        
     }
 
     public Project(String name, LocalDate dateCreated) {

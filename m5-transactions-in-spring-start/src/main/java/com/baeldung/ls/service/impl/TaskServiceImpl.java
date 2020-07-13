@@ -14,15 +14,17 @@ public class TaskServiceImpl implements ITaskService {
     public TaskServiceImpl(ITaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
-
+    
+    
     @Override
     public Iterable<Task> findAll() {
         return taskRepository.findAll();
     }
 
     @Override
-    public Task save(Task task) {
-        return taskRepository.save(task);
+    public Task save(Task task) throws TaskNotSavedException{
+      throw new TaskNotSavedException("Unable to safe task");
+     // return taskRepository.save(task);
     }
 
 }
