@@ -1,0 +1,4 @@
+com\baeldung\ls\spring\TestConfig.class
+com\baeldung\ls\SpringContextIntegrationTest.class
+com\baeldung\ls\service\SpringContextIntegrationTest.class
+com\baeldung\ls\persistence\repository\ProjectRepositoryIntegrationTest.class

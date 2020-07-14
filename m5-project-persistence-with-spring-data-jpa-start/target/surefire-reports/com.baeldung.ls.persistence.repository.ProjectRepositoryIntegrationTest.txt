@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.baeldung.ls.persistence.repository.ProjectRepositoryIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.044 s <<< FAILURE! - in com.baeldung.ls.persistence.repository.ProjectRepositoryIntegrationTest
+givenProject_whenFindById_thenSuccess  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.baeldung.ls.persistence.repository.ProjectRepositoryIntegrationTest.givenProject_whenFindById_thenSuccess(ProjectRepositoryIntegrationTest.java:34)
+
+whenSavingNewProject_thenSuccess  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.baeldung.ls.persistence.repository.ProjectRepositoryIntegrationTest.whenSavingNewProject_thenSuccess(ProjectRepositoryIntegrationTest.java:28)
+
